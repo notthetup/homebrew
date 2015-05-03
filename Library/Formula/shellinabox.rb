@@ -7,6 +7,8 @@ class Shellinabox < Formula
 
   def install
     system "./configure", "--disable-dependency-tracking",
+                          "--disable-runtime-loading",
+                          "--disable-pam",
                           "--prefix=#{prefix}"
     system "make", "install"
   end
